@@ -12,8 +12,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .page {
@@ -30,7 +29,7 @@ code {
   padding: 20px 12px;
 
   @include onDesktop {
-    padding: 42px 0;
+    padding: 42px 12px;
   }
 }
 
@@ -41,28 +40,27 @@ code {
 
   margin-bottom: 38px;
 
-  @include onTab {
+  @include onSmallDesktop {
     margin-bottom: 145px;
   }
-
 }
 
 .logo {
   margin: 0;
   padding: 8px;
 
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
 
   font-family: 'Crimson Pro';
   font-weight: 200;
   font-size: 14px;
 
   text-transform: uppercase;
+  text-decoration: none;
   color: #fff;
 }
 
 .menu {
-  // display: none;
   display: none;
 
   @include onTab {
@@ -92,7 +90,7 @@ code {
     font-weight: 500;
     font-size: 18px;
 
-    color: #FFFFFF;
+    color: #ffffff;
 
     text-decoration: none;
 
@@ -124,5 +122,189 @@ code {
     color: #fff;
 
     cursor: pointer;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  position: relative;
+
+  @include onSmallDesktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.text-block {
+  max-width: 400px;
+
+  color: #fff;
+
+  margin-bottom: 35px;
+
+  @include onSmallDesktop {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-family: 'Lora';
+    font-weight: 500;
+    font-size: 36px;
+
+    @include onSmallDesktop {
+      margin-top: 120px;
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    @include onDesktop {
+      font-size: 48px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    @include onBigPhone {
+      font-size: 18px;
+      line-height: 22px;
+
+      margin-bottom: 35px;
+    }
+
+    @include onSmallDesktop {
+      font-size: 24px;
+      line-height: 29px;
+
+      margin-bottom: 48px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: flex-start;
+
+    background-color: transparent;
+    border: none;
+
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    &__text {
+      margin-right: 10px;
+    }
+  }
+}
+
+.img-block {
+  position: relative;
+  color: #fff;
+  align-self: center;
+
+  max-width: 600px;
+}
+
+.img {
+  max-width: 750px;
+  width: 100%;
+}
+
+.comment {
+  box-sizing: border-box;
+
+  padding: 15px 25px;
+
+  position: absolute;
+  right: 10px;
+  bottom: -70px;
+  max-width: 300px;
+  width: 100%;
+  height: 140px;
+
+  background: #181719;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include onSmallDesktop {
+    max-width: 410px;
+    height: 190px;
+
+    right: 20px;
+    bottom: -105px;
+  }
+
+  &-block {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+      width: 35px;
+      height: 35px;
+
+      margin-right: 15px;
+
+      border-radius: 50%;
+
+      @include onSmallDesktop {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    &__text {
+      &__name {
+        margin: 0;
+        margin-bottom: 8px;
+
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 12px;
+
+        @include onSmallDesktop {
+          font-size: 14px;
+        }
+      }
+
+      &__position {
+        margin: 0;
+
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 10px;
+
+        color: #828282;
+
+        @include onSmallDesktop {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-family: 'Lora';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 31px;
+
+    @include onSmallDesktop {
+      font-size: 24px;
+    }
   }
 }
