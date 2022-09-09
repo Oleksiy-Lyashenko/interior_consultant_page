@@ -1,6 +1,7 @@
 {
   "name": "interior_consultant_page",
   "version": "0.1.0",
+  "homepage": "https://Oleksiy-Lyashenko.github.io/interior_consultant_page",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
