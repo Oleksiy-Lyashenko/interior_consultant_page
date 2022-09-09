@@ -1,24 +1,70 @@
-import BurgerMenu from './BurgerMenu';
 import Nav from './Nav';
 import { MdArrowRightAlt } from 'react-icons/md';
+import { RiCloseFill } from 'react-icons/ri';
 
 import BackgroundImg from './assets/photo1.png';
 import CommentLogo from './assets/photo2.png';
+import BurgerMenuIcon from './assets/burger-menu.svg';
+
+import { useState } from 'react';
 
 function App() {
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <div className="page">
       <div className="wrapper">
-        <nav className="nav">
+        <header className="header" hidden>
           <div className="logo-block">
-            <a href='/' className="logo">This Interior</a>
+            <a href="/" className="logo">
+              This Interior
+            </a>
           </div>
 
           <Nav />
-          <BurgerMenu />
-        </nav>
 
-        <div className="content">
+          <div className="burger-menu" onClick={() => setOpenMenu(true)}>
+            <img src={BurgerMenuIcon} alt="" className="burger-menu__style" />
+          </div>
+        </header>
+
+        {openMenu && (
+          <nav className="nav">
+            <div className="nav__top">
+              <RiCloseFill
+                size="40px"
+                className="nav__closer"
+                color="#fff"
+                onClick={() => setOpenMenu(false)}
+              />
+            </div>
+
+            <ul className="nav__list">
+              <li className="nav__item">
+                <a href="/" className="nav__link">
+                  Home
+                </a>
+              </li>
+              <li className="nav__item">
+                <a href="/" className="nav__link">
+                  Collection
+                </a>
+              </li>
+              <li className="nav__item">
+                <a href="/" className="nav__link">
+                  About
+                </a>
+              </li>
+              <li className="nav__item">
+                <a href="/" className="nav__link">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        )}
+
+        <div className="content" hidden>
           <div className="text-block">
             <h1 className="text-block__title">Modern interior</h1>
 

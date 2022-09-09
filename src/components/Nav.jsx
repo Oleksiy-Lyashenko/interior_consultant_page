@@ -22,8 +22,6 @@ export default function Nav() {
           Contact
         </a>
       </li>
-
-      {/* <GiHamburgerMenu color='#fff' size='30px'/> */}
     </ul>
   );
 }
