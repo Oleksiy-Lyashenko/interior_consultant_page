@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/interior_consultant_page/static/css/main.26d283e7.css",
+    "main.js": "/interior_consultant_page/static/js/main.50a87358.js",
+    "static/js/787.fadba83a.chunk.js": "/interior_consultant_page/static/js/787.fadba83a.chunk.js",
+    "static/media/photo1.png": "/interior_consultant_page/static/media/photo1.adfbc15e07d2363bfcf9.png",
+    "static/media/photo2.png": "/interior_consultant_page/static/media/photo2.eada07e9629ccc0d2a74.png",
+    "index.html": "/interior_consultant_page/index.html",
+    "static/media/burger-menu.svg": "/interior_consultant_page/static/media/burger-menu.72b6b0ea9add5f04512763a97c19593e.svg",
+    "main.26d283e7.css.map": "/interior_consultant_page/static/css/main.26d283e7.css.map",
+    "main.50a87358.js.map": "/interior_consultant_page/static/js/main.50a87358.js.map",
+    "787.fadba83a.chunk.js.map": "/interior_consultant_page/static/js/787.fadba83a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26d283e7.css",
+    "static/js/main.50a87358.js"
+  ]
+}
